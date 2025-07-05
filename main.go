@@ -29,8 +29,10 @@ func main() {
 		MaxAge:           300,
 	}))
 
+	//chi implementation
 	v1Router := chi.NewRouter()
 
+	// 2 router routes i.e. healthz and err for error
 	v1Router.Get("/healthz", handlerReadiness)
 	v1Router.Get("/err", handlerErr)
 
